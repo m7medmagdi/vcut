@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VCUT - Opening Soon</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for future icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-xh6U+vvZkZxYT9aEYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Alexandria', sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #ffffff;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Branding Container */
+    .container {
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4em;
+      letter-spacing: 5px;
+      color: #00f2ff;
+      text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+      animation: glow 3s infinite alternate;
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-top: 1.5rem;
+      color: #ffffffcc;
+      animation: slideUp 2s ease forwards;
+      animation-delay: 1s;
+      opacity: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(-10px); }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff, 0 0 30px #00f2ff;
+      }
+      to {
+        text-shadow: 0 0 20px #00f2ff, 0 0 30px #00f2ff, 0 0 40px #00f2ff;
+      }
+    }
+
+    /* Particle-like floating circles */
+    .particles {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      animation: float 15s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translateY(-80px) scale(1.2);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Background Particles -->
+  <div class="particles">
+    <div class="circle" style="width: 80px; height: 80px; top: 10%; left: 15%; animation-delay: 0s;"></div>
+    <div class="circle" style="width: 50px; height: 50px; top: 70%; left: 20%; animation-delay: 2s;"></div>
+    <div class="circle" style="width: 30px; height: 30px; top: 40%; left: 50%; animation-delay: 4s;"></div>
+    <div class="circle" style="width: 60px; height: 60px; top: 80%; left: 70%; animation-delay: 1s;"></div>
+    <div class="circle" style="width: 100px; height: 100px; top: 20%; left: 80%; animation-delay: 3s;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <h1>شركة في كات</h1>
+
+    <h1>VCUT Company</h1>
+    <br>
+    <p>We're crafting something amazing. Launching soon.</p>
+    <p>نحن نصنع شيئًا مذهلاً. سيتم إطلاقه قريبًا.</p>
+    <p>انتظرونا</p>
+  </div>
+
+</body>
+</html>
